@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Floda Store
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Css/Style.css" />
+</head>
+<body>
+    <div id="top">
+        <span>
+            Welcome to Floda online store
+        </span>
+        <div class="language">
+            <a href="#">
+                Languages<i class="fa fa-angle-down"></i>
+            </a>
+        </div>
+        <div class="fb-insta-skype">
+            <a href="#" class="fb-insta-skype-item">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+            <a href="#" class="fb-insta-skype-item">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" class="fb-insta-skype-item">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <header>
+        <div class="logo">
+            <a href="#">Floda</a>
+        </div>
+        <div class="menu">
+            <div class="menu-item">
+                <a href="#">TRANG CHỦ</a>
+            </div>
+            <div class="menu-item">
+                <a href="#">GIỚI THIỆU</a>
+            </div>
+            <div class="dropdown">
+                <div class="menu-item">
+                    CỬA HÀNG <i class="fa fa-angle-down"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">
+                        Hoa của mẹ
+                    </a>
+                    <a href="#">
+                        Hoa cưới
+                    </a>
+                    <a href="#">
+                        Hoa sale
+                    </a>
+                    <a href="#">
+                        Hoa tựu trường
+                    </a>
+                    <a href="#">
+                        Hoa Valentine
+                    </a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="#">LIÊN HỆ</a>
+            </div>
+        </div>
+        <div class="icon">
+            <div class="icont-item search-dropdown">
+                <a class="search" href="#"><i class="fa fa-search"></i></a>
+                <div class="search-dropdown-content">
+                    <div class="input">
+                        <input type="text" placeholder="Tìm kiếm...">
+                    </div>
+                    <div class="search-icon"><i class="fa fa-search"></i></div>
+                </div>
+            </div>
+            <div class="icon-item">
+                <a href="#"><i class="fa fa-heart"></i></a>
+            </div>
+            <div class="icon-item">
+                <a href="#"><i class="fa fa-user"></i></a>
+            </div>
+            <div class="icon-item shopping-cart-dropdown">
+                <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                <div class="shopping-cart-dropdown-content">
+                    <span>Chưa có sản phẩm nào trong giỏ hàng.</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="header-respon">
+        <div class="logo" onclick="showNav()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="brand">
+            <span>
+                Floda
+            </span>
+        </div>
+        <div class="shopping-cart">
+            <i class="fa fa-shopping-cart" onclick="showShoppingCart()"></i>
+        </div>
+    </div>
+    <div id="nav">
+        <ul class="nav-container">
+            <li class="close" onclick="closeNav()">
+                <i>
+                    <div class="fa fa-times"></div>
+                </i>
+            </li>
+            <li class="nav-item search-container">
+                <input type="text">
+                <div class="search-icon"><i class="fa fa-search"></i></div>
+            </li>
+            <li class="nav-item">
+                <span>TRANG CHỦ</span>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <span>CỬA HÀNG</span>
+                <div class="angle-down" onclick="navFunction()">
+                    <i class="fa fa-angle-down"></i>
+                </div>
+                <ul class="nav-dropdown-content">
+                    <li>Hoa của mẹ</li>
+                    <li>Hoa cưới</li>
+                    <li>Hoa Sale</li>
+                    <li>Hoa Valentine</li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <span>TIN TỨC</span>
+            </li>
+            <li class="nav-item">
+                <span>LIÊN HỆ</span>
+            </li>
+        </ul>
+    </div>
+    <div id="shopping-cart">
+        <div class="shopping-cart-container">
+            <div class="close">
+                <i class="fa fa-times" onclick="closeShoppingCart()"></i>
+            </div>
+            <div class="title">
+                <h2>GIỎ HÀNG</h2>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div id="main">
+        <div id="title">
+            <h1>
+                liên hệ
+            </h1>
+            <ul class="bread-cum">
+                <li>
+                    <a href="index.html">
+                        trang chủ
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        liên hệ
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="contact">
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.0870801081032!2d106.70935761405835!3d10.956794592199294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d751e024b99d%3A0x20b3f9b4c8fdc732!2sBinh%20Duong%20Economics%20and%20Technology%20University!5e0!3m2!1svi!2s!4v1585934646232!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="form">
+                <div class="title">
+                    liên hệ với chúng tôi
+                </div>
+                <span class="text-divider">Floda</span>
+                <ul class="information">
+                    <li>
+                        <input type="text" placeholder="Họ tên">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Email">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Số điện thoại">
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Địa chỉ">
+                    </li>
+                </ul>
+                <div class="text-area-button">
+                    <textarea name="" placeholder="Nội dung..."></textarea>
+                    <button>Gửi</button>
+                </div>
+                <iframe class="iframe" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdhktktbinhduong%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" 
+                width="300" 
+                height="300" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowTransparency="false" 
+                allow="encrypted-media"></iframe>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<footer>
+    <div class="contact">
+        <h3>
+            liên hệ
+        </h3>
+        <ul>
+            <li class="contact-items">
+                <a href="#">
+                    <i class="fa fa-map-marker">
+                    </i>
+                    <span>
+                        Địa chỉ : 201 Đường 30/4 , Phú Hòa , Thủ Dầu Một, Bình Dương
+                    </span>
+                </a>
+            </li>
+            <li class="contact-items">
+                <a href="#">
+                    <i class="fa fa-phone">
+                    </i>
+                    <span>
+                        Điện thoại : (+84) 900 135 791
+                    </span>
+                </a>
+            </li>
+            <li class="contact-items">
+                <a href="#">
+                    <i class="fa fa-envelope">
+                    </i>
+                    <span>
+                        Email : flodastore@gmail.com
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="category">
+        <h3>
+            danh mục
+        </h3>
+        <ul>
+            <li class="category-items">
+                <a href="#">
+                    Hoa cưới
+                </a>
+            </li>
+            <li class="category-items">
+                <a href="#">
+                    Hoa Sale
+                </a>
+            </li>
+            <li class="category-items">
+                <a href="#">
+                    Hoa Tựu Trường
+                </a>
+            </li>
+            <li class="category-items">
+                <a href="#">
+                    Hoa Valentine
+                </a>
+            </li>
+            <li class="category-items">
+                <a href="#">
+                    Hoa 8/3
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="tabble-of-content">
+        <h3>
+            mục lục
+        </h3>
+        <ul>
+            <li class="tabble-of-content-items">
+                <a href="#">
+                    trang chủ
+                </a>
+            </li>
+            <li class="tabble-of-content-items">
+                <a href="#">
+                    giới thiệu
+                </a>
+            </li>
+            <li class="tabble-of-content-items">
+                <a href="#">
+                    liên hệ
+                </a>
+            </li>
+            <li class="tabble-of-content-items">
+                <a href="#">
+                    giao dịch
+                </a>
+            </li>
+            <li class="tabble-of-content-items">
+                <a href="#">
+                    vận chuyển
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="link">
+        <h3>
+            liên kết
+        </h3>
+        <ul>
+            <li class="link-items">
+                <a href="#">
+                    tài khoản
+                </a>
+            </li>
+            <li class="link-items">
+                <a href="">
+                    địa chỉ cửa hàng
+                </a>
+            </li>
+            <li class="link-items">
+                <a href="">
+                    theo dõi đơn hàng
+                </a>
+            </li>
+            <li class="link-items">
+                <a href="">
+                    hướng dẫn
+                </a>
+            </li>
+            <li class="link-items">
+                <a href="">
+                    liên hệ
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<div id="finally">
+    <span>
+        coppy right &copy all right reserved
+    </span>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#carousel").slick({
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            swipeToSlide: true,
+            speed: 2000,
+            pauseOnHover: false
+        });
+
+        $("#for-you").slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 3000,
+            swipeToSlide: true,
+            pauseOnHover: false
+        });
+    });
+</script>
+<script src="./Script/Script.js">
+</script>
+
+</html>
